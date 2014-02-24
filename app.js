@@ -432,3 +432,9 @@ fs.readFile('./config/ipbans.txt', function (err, data) {
 });
 
 global.tour = new (require('./tour.js').tour)();
+global.tourBotInterval = setInterval(function () {
+	var room = Rooms.rooms.lobby;
+	if (!room || Object.keys(room.users).filter(function (u) { return room.users[u].named; }).length < 6)
+		return;
+	room.chat({can:function(){return true;},name:"The server"}, '/tour ' + ['ou', 'uubeta', 'oumonotype'].randomize()[0] + ',5 minutes', {sendTo:function(){}});
+}, 30 * 60 * 1000);
