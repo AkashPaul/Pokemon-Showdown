@@ -349,6 +349,37 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
+		name: "Moxie",
+		section: "Moxie Metas",
+
+		ruleset: ['OU'],
+		validateSet: function(set) {
+			if (set.ability !== 'Moxie') {
+				return [set.species + " doesn't have Moxie."];
+			}
+		}
+	},
+	{
+		name: "GenX",
+		section: "Moxie Metas",
+
+		ruleset: ['Pokemon', 'Team Preview', 'OHKO Clause'],
+		banlist: ['Unreleased', 'Illegal', 'Soul Dew',
+			'Mewtwo', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y',
+			'Kyogre',
+			'Groudon',
+			'Rayquaza',
+			'Darkrai',
+			'Shaymin-Sky',
+			'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed',
+			'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water',
+			'Reshiram',
+			'Zekrom',
+			'Kyurem-White',
+			'Xerneas'
+		]
+	},
+	{
 		name: "[Seasonal] Fabulous February",
 		section: "OM of the Month",
 
@@ -378,37 +409,6 @@ exports.Formats = [
 				return [set.species + " is not the middle Pokémon in an evolution chain."];
 			}
 		}
-	},
-	{
-		name: "Moxie",
-		section: "Other Metagames",
-
-		ruleset: ['OU'],
-		validateSet: function(set) {
-			if (set.ability !== 'Moxie') {
-				return [set.species + " doesn't have Moxie."];
-			}
-		}
-	},
-	{
-		name: "GenX",
-		section: "Other Metagames",
-
-		ruleset: ['Pokemon', 'Team Preview', 'OHKO Clause'],
-		banlist: ['Unreleased', 'Illegal', 'Soul Dew',
-			'Mewtwo', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y',
-			'Kyogre',
-			'Groudon',
-			'Rayquaza',
-			'Darkrai',
-			'Shaymin-Sky',
-			'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed',
-			'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water',
-			'Reshiram',
-			'Zekrom',
-			'Kyurem-White',
-			'Xerneas'
-		]
 	},
 	{
 		name: "CAP",
